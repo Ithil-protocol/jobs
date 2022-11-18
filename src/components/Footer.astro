@@ -1,0 +1,46 @@
+---
+import Hr from "./Hr.astro";
+import Socials from "./Socials.astro";
+
+const currentYear = new Date().getFullYear();
+
+export interface Props {
+  noMarginTop?: boolean;
+}
+
+const { noMarginTop = false } = Astro.props;
+---
+
+<footer class={`${noMarginTop ? "" : "mt-auto"}`}>
+  <Hr noPadding />
+  <div class="footer-wrapper">
+    <div class="link-wrapper">
+      <span
+        >Learn more about us at <a href="https://ithil.fi" target="_blank"
+          >ithil.fi</a
+        >
+      </span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    @apply w-full;
+  }
+  .footer-wrapper {
+    @apply py-6 sm:py-4 flex flex-col;
+  }
+  .link-button {
+    @apply p-2 my-1 hover:rotate-6;
+  }
+  .link-button svg {
+    @apply scale-125;
+  }
+  .link-wrapper {
+    @apply my-2 flex flex-col sm:flex-row whitespace-nowrap;
+  }
+  .separator {
+    @apply hidden sm:inline;
+  }
+</style>
