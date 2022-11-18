@@ -1,2 +1,2 @@
 # Job Board
-A list of open positions at Ithil
+A list of open positions at Ithil.
