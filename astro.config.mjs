@@ -7,7 +7,9 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-paper.pages.dev/",
+  site: "https://jobs.ithil.fi/",
+  base: "https://jobs.ithil.fi/",
+  output: "static",
   integrations: [
     tailwind({
       config: {
